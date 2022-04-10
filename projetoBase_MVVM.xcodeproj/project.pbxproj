@@ -11,6 +11,9 @@
 		E127D4BE27FFCBEA004CE024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4BD27FFCBEA004CE024 /* ContentView.swift */; };
 		E127D4C027FFCBEE004CE024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127D4BF27FFCBEE004CE024 /* Assets.xcassets */; };
 		E127D4C327FFCBEE004CE024 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127D4C227FFCBEE004CE024 /* Preview Assets.xcassets */; };
+		E127D4D728033250004CE024 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4D628033250004CE024 /* APIConstants.swift */; };
+		E127D4D92803348C004CE024 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4D82803348C004CE024 /* Model.swift */; };
+		E127D4DB28033799004CE024 /* QuotesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4DA28033799004CE024 /* QuotesScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		E127D4BD27FFCBEA004CE024 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E127D4BF27FFCBEE004CE024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E127D4C227FFCBEE004CE024 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E127D4D628033250004CE024 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		E127D4D82803348C004CE024 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E127D4DA28033799004CE024 /* QuotesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		E127D4BA27FFCBEA004CE024 /* projetoBase_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				E127D4CA27FFCCFC004CE024 /* Feature */,
+				E127D4C927FFCCF4004CE024 /* Base */,
 				E127D4BB27FFCBEA004CE024 /* projetoBase_MVVMApp.swift */,
 				E127D4BD27FFCBEA004CE024 /* ContentView.swift */,
 				E127D4BF27FFCBEE004CE024 /* Assets.xcassets */,
@@ -65,6 +73,111 @@
 				E127D4C227FFCBEE004CE024 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E127D4C927FFCCF4004CE024 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4CD27FFCD55004CE024 /* View */,
+				E127D4CC27FFCD49004CE024 /* Extensions */,
+				E127D4CB27FFCD3B004CE024 /* Constants */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E127D4CA27FFCCFC004CE024 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4D027FFCD92004CE024 /* Quotes */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		E127D4CB27FFCD3B004CE024 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4D628033250004CE024 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E127D4CC27FFCD49004CE024 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4CE27FFCD67004CE024 /* Modifiers */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E127D4CD27FFCD55004CE024 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4CF27FFCD73004CE024 /* Loading */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E127D4CE27FFCD67004CE024 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		E127D4CF27FFCD73004CE024 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		E127D4D027FFCD92004CE024 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4D527FFCDC4004CE024 /* ViewModel */,
+				E127D4D427FFCDBB004CE024 /* View */,
+				E127D4D327FFCDB0004CE024 /* Service */,
+				E127D4D227FFCDA5004CE024 /* Screen */,
+				E127D4D127FFCD9B004CE024 /* Model */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		E127D4D127FFCD9B004CE024 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4D82803348C004CE024 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E127D4D227FFCDA5004CE024 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E127D4D327FFCDB0004CE024 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E127D4D427FFCDBB004CE024 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4DA28033799004CE024 /* QuotesScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E127D4D527FFCDC4004CE024 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +252,9 @@
 			files = (
 				E127D4BE27FFCBEA004CE024 /* ContentView.swift in Sources */,
 				E127D4BC27FFCBEA004CE024 /* projetoBase_MVVMApp.swift in Sources */,
+				E127D4D728033250004CE024 /* APIConstants.swift in Sources */,
+				E127D4D92803348C004CE024 /* Model.swift in Sources */,
+				E127D4DB28033799004CE024 /* QuotesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
