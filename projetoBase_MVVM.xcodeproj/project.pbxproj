@@ -19,6 +19,7 @@
 		E127D4E12804E3C0004CE024 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4E02804E3C0004CE024 /* QuotesViewModel.swift */; };
 		E127D4E32804E459004CE024 /* View+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4E22804E459004CE024 /* View+Preview.swift */; };
 		E127D4E52804E4A7004CE024 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4E42804E4A7004CE024 /* LoadingView.swift */; };
+		E127D4E828050C21004CE024 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4E728050C21004CE024 /* NetworkErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E127D4E02804E3C0004CE024 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 		E127D4E22804E459004CE024 /* View+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Preview.swift"; sourceTree = "<group>"; };
 		E127D4E42804E4A7004CE024 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E127D4E728050C21004CE024 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		E127D4C927FFCCF4004CE024 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E127D4E628050C07004CE024 /* Error */,
 				E127D4CD27FFCD55004CE024 /* View */,
 				E127D4CC27FFCD49004CE024 /* Extensions */,
 				E127D4CB27FFCD3B004CE024 /* Constants */,
@@ -195,6 +198,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E127D4E628050C07004CE024 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				E127D4E728050C21004CE024 /* NetworkErrors.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -274,6 +285,7 @@
 				E127D4D728033250004CE024 /* APIConstants.swift in Sources */,
 				E127D4E12804E3C0004CE024 /* QuotesViewModel.swift in Sources */,
 				E127D4D92803348C004CE024 /* Model.swift in Sources */,
+				E127D4E828050C21004CE024 /* NetworkErrors.swift in Sources */,
 				E127D4DB28033799004CE024 /* QuoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
