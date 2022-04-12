@@ -37,6 +37,7 @@
 		E127D4E22804E459004CE024 /* View+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Preview.swift"; sourceTree = "<group>"; };
 		E127D4E42804E4A7004CE024 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E127D4E728050C21004CE024 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		E127D4E928050D50004CE024 /* Projeto.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Projeto.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 				E127D4BD27FFCBEA004CE024 /* ContentView.swift */,
 				E127D4BF27FFCBEE004CE024 /* Assets.xcassets */,
 				E127D4C127FFCBEE004CE024 /* Preview Content */,
+				E127D4E928050D50004CE024 /* Projeto.md */,
 			);
 			path = projetoBase_MVVM;
 			sourceTree = "<group>";
