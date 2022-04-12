@@ -10,23 +10,25 @@ import SwiftUI
 struct QuoteView: View
 {
     
-    let item: Quote
     
-    var body: some View {
-        VStack(alignment: .leading,
-               spacing: 8) {
-            HStack {
-                Image(systemName: "tv")
-                    .font(.system(size: 12, weight: .black))
-                Text(item.anime)
-            }
-
-            Text(makeAttributedString(title:"Character", label: item.character))
-            Text(makeAttributedString(title:"Quotes", label: item.quote))
-        }
-        .padding()
-        .foregroundColor(.black)
-    }
+     let item: Quote
+     
+     var body: some View {
+         VStack(alignment: .leading,
+                spacing: 8) {
+             HStack {
+                 Image(systemName: "tv")
+                     .font(.system(size: 12, weight: .black))
+                 Text(String(item.userId))
+             }
+             
+             Text(String(item.id))
+             Text(makeAttributedString(title:"Character", label: item.title))
+             Text(makeAttributedString(title:"Quotes", label: item.body))
+         }
+         .padding()
+         .foregroundColor(.black)
+     }
     
     private func makeAttributedString(title: String, label: String) -> AttributedString {
         
