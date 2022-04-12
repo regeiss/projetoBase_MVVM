@@ -9,21 +9,16 @@ import Foundation
 
 struct Quote: Decodable
 {
-    let anime: String
-    let character: String
-    let quote: String
+  let userId: Int
+  let id: Int
+  let title: String
+  let body: String
 }
 
-extension Quote {
-    
-    static var dummyData: [Quote] {
-        
-        [
-            Quote(anime: "Anime 1", character: "Character 1", quote: "Random Quote 1"),
-            Quote(anime: "Anime 2", character: "Character 2", quote: "Random Quote 2"),
-            Quote(anime: "Anime 3", character: "Character 3", quote: "Random Quote 3"),
-            Quote(anime: "Anime 4", character: "Character 4", quote: "Random Quote 4"),
-            Quote(anime: "Anime 5", character: "Character 5", quote: "Random Quote 5")
-        ]
+extension Quote
+{
+    static var dummyData: [Quote]
+    {
+        [Quote(userId: 1, id: 1,title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",body: "quia et susm rerum est autem sunt rem eveniet architecto")]
     }
 }
