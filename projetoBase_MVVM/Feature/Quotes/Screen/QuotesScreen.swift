@@ -19,12 +19,12 @@ struct QuotesScreen: View {
             
             if vm.quotes.isEmpty {
                 
-                LoadingView(text: "Fetching Quotes...")
+                LoadingView(text: "Fetching Posts...")
                 
             } else {
                 
                 List {
-                    ForEach(vm.quotes, id: \.anime) { item in
+                    ForEach(vm.quotes, id: \.userId) { item in
                         QuoteView(item: item)
                     }
                 }
