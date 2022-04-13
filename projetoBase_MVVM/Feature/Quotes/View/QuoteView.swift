@@ -9,8 +9,6 @@ import SwiftUI
 
 struct QuoteView: View
 {
-    
-    
      let item: Quote
      
      var body: some View {
@@ -47,7 +45,8 @@ struct QuoteView: View
 
 struct QuoteView_Previews: PreviewProvider
 {
-    static var previews: some View {
+    static var previews: some View
+    {
         QuoteView(item: Quote.dummyData.first!)
             .preview(displayName: "Quote View")
     }
