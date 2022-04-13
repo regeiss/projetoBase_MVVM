@@ -24,7 +24,7 @@ struct QuotesScreen: View {
             } else {
                 
                 List {
-                    ForEach(vm.quotes, id: \.userId) { item in
+                    ForEach(vm.quotes, id: \.id) { item in
                         QuoteView(item: item)
                     }
                 }

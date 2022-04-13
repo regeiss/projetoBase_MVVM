@@ -9,6 +9,8 @@ import Foundation
 
 enum APIConstants
 {
-    static let baseURL = "https://animachan.vercel.app"
+    static let baseURL = "https://jsonplaceholder.typicode.com"
+    
+    // https://jsonplaceholder.typicode.com/posts
+    // http://api.plos.org/solr/examples/
 }
-
