@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11830F128079A21003D4437 /* NetworkReach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11830F028079A21003D4437 /* NetworkReach.swift */; };
 		E127D4BC27FFCBEA004CE024 /* projetoBase_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4BB27FFCBEA004CE024 /* projetoBase_MVVMApp.swift */; };
 		E127D4BE27FFCBEA004CE024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4BD27FFCBEA004CE024 /* ContentView.swift */; };
 		E127D4C027FFCBEE004CE024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127D4BF27FFCBEE004CE024 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E11830F028079A21003D4437 /* NetworkReach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReach.swift; sourceTree = "<group>"; };
 		E127D4B827FFCBEA004CE024 /* projetoBase_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoBase_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E127D4BB27FFCBEA004CE024 /* projetoBase_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projetoBase_MVVMApp.swift; sourceTree = "<group>"; };
 		E127D4BD27FFCBEA004CE024 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11830EF28079970003D4437 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E11830F028079A21003D4437 /* NetworkReach.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		E127D4AF27FFCBEA004CE024 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		E127D4C927FFCCF4004CE024 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E11830EF28079970003D4437 /* Network */,
 				E127D4E628050C07004CE024 /* Error */,
 				E127D4CD27FFCD55004CE024 /* View */,
 				E127D4CC27FFCD49004CE024 /* Extensions */,
@@ -284,6 +295,7 @@
 				E127D4E52804E4A7004CE024 /* LoadingView.swift in Sources */,
 				E127D4BE27FFCBEA004CE024 /* ContentView.swift in Sources */,
 				E127D4BC27FFCBEA004CE024 /* projetoBase_MVVMApp.swift in Sources */,
+				E11830F128079A21003D4437 /* NetworkReach.swift in Sources */,
 				E127D4D728033250004CE024 /* APIConstants.swift in Sources */,
 				E127D4E12804E3C0004CE024 /* QuotesViewModel.swift in Sources */,
 				E127D4D92803348C004CE024 /* Model.swift in Sources */,
