@@ -19,6 +19,7 @@ final class QuotesViewModelImpl: QuotesViewModel
     @Published private(set) var quotes: [Quote] = []
     
     private let service: QuotesService
+    let networkReachability = NetworkReachability()
     
     init(service: QuotesService)
     {
@@ -28,6 +29,7 @@ final class QuotesViewModelImpl: QuotesViewModel
     func getAllQuotes() async
     {
         // TODO: Verificar erros de conexao
+        print("Is the network reachable? \(networkReachability.reachable)")
         do
         {
             self.quotes = try await service.fetch()

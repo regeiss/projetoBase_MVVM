@@ -11,6 +11,8 @@ struct QuotesScreen: View
 {
     
     @StateObject private var vm = QuotesViewModelImpl(service: QuotesServiceImpl())
+    @ObservedObject var monitor = NetworkReachability()
+    @State private var showAlertSheet = false
     
     var body: some View
     {
@@ -30,7 +32,12 @@ struct QuotesScreen: View
                     }
                 }
             }
-        }
+        }.alert(isPresented: $showAlertSheet, content: {
+            if monitor.reachable {
+                return Alert(title: Text("Success!"), message: Text("The network request can be performed"), dismissButton: .default(Text("OK")))
+            }
+            return Alert(title: Text("No Internet Connection"), message: Text("Please enable Wifi or Celluar data"), dismissButton: .default(Text("Cancel")))
+        })
         .task
         {
             await vm.getAllQuotes()
