@@ -8,9 +8,12 @@
 import SwiftUI
 
 @main
-struct projetoBase_MVVMApp: App {
-    var body: some Scene {
-        WindowGroup {
+struct projetoBase_MVVMApp: App
+{
+    var body: some Scene
+    {
+        WindowGroup
+        {
             QuotesScreen()
         }
     }

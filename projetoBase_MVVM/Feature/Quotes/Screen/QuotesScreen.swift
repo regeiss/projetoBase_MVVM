@@ -7,37 +7,41 @@
 
 import SwiftUI
 
-struct QuotesScreen: View {
+struct QuotesScreen: View
+{
     
-    @StateObject private var vm = QuotesViewModelImpl(
-        service: QuotesServiceImpl()
-    )
+    @StateObject private var vm = QuotesViewModelImpl(service: QuotesServiceImpl())
     
-    var body: some View {
-        
-        Group {
-            
-            if vm.quotes.isEmpty {
-                
+    var body: some View
+    {
+        Group
+        {
+            if vm.quotes.isEmpty
+            {
                 LoadingView(text: "Fetching Posts...")
-                
-            } else {
-                
-                List {
-                    ForEach(vm.quotes, id: \.id) { item in
+            }
+            else
+            {
+                List
+                {
+                    ForEach(vm.quotes, id: \.id)
+                    { item in
                         QuoteView(item: item)
                     }
                 }
             }
         }
-        .task {
+        .task
+        {
             await vm.getAllQuotes()
         }
     }
 }
 
-struct QuotesScreen_Previews: PreviewProvider {
-    static var previews: some View {
+struct QuotesScreen_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
         QuotesScreen()
     }
 }
