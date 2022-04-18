@@ -11,7 +11,7 @@ import SystemConfiguration
 class NetworkReachability: ObservableObject
 {
     @Published private(set) var reachable: Bool = false
-    private let reachability = SCNetworkReachabilityCreateWithName(nil, "www.designcode.io")
+    private let reachability = SCNetworkReachabilityCreateWithName(nil, "https://jsonplaceholder.typicode.com")
 
     init()
     {

@@ -13,14 +13,22 @@ protocol QuotesService
 
 final class QuotesServiceImpl: QuotesService
 {
-    
     func fetch() async throws -> [Quote]
     {
         // testar conexao
+        let networkReachability = NetworkReachability()
+        print("Is the network reachable? \(networkReachability.reachable)")
+        if networkReachability.reachable ==  false
+        {
+            fatalError("sem rede")
+        }
+        
         let urlSession = URLSession.shared
         let url = URL(string: APIConstants.baseURL.appending("/posts"))
-        print(url!)
-        let (data, _) = try await urlSession.data(from: url!)
+        let (data, response) = try await urlSession.data(from: url!)
+        
+        guard (response as? HTTPURLResponse)?.statusCode == 200
+        else {fatalError("erro")}
         // testar retorno
         return try JSONDecoder().decode([Quote].self, from: data)
     }

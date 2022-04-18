@@ -24,8 +24,8 @@ struct QuoteView: View
              }
              
              Text(makeAttributedString(title:"ID", label:String(item.userId)))
-             Text(makeAttributedString(title:"Title", label: item.title))
-             Text(makeAttributedString(title:"Body", label: item.body))
+             Text(makeAttributedString(title:"Titulo", label: item.title))
+             Text(makeAttributedString(title:"Texto", label: item.body))
          }
          .padding()
          .foregroundColor(.black)
