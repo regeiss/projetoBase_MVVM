@@ -15,12 +15,20 @@ protocol QuotesViewModel: ObservableObject
 @MainActor
 final class QuotesViewModelImpl: QuotesViewModel
 {
-    
+    enum State 
+    {
+        case na
+        case loading
+        case success(data: [Quote])
+        case failed(error: Error)
+    }
+
     @Published private(set) var quotes: [Quote] = []
+    @Published private(set) var state: State = .na
+    @Published var hasError: Bool = false
     
     private let service: QuotesService
-    let networkReachability = NetworkReachability()
-    
+
     init(service: QuotesService)
     {
         self.service = service
@@ -28,15 +36,18 @@ final class QuotesViewModelImpl: QuotesViewModel
     
     func getAllQuotes() async
     {
-        // TODO: Verificar erros de conexao
-        print("Is the network reachable? \(networkReachability.reachable)")
+        self.state = .loading
+        self.hasError = false
         do
         {
-            self.quotes = try await service.fetch()
+            //self.quotes = try await service.fetch()
+            let data = try await service.fetch()
+            self.state = .success(data: data)
         }
         catch
         {
-            print(error.localizedDescription)
+            self.state = .failed(error: error)
+            self.hasError = true
         }
     }
 }

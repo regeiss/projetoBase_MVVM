@@ -3,7 +3,7 @@
 //  projetoBase_MVVM
 //
 //  Created by Roberto Edgar Geiss on 10/04/22.
-//
+//  Alterado: 19/04/2022 12:59:28
 
 import SwiftUI
 
@@ -15,19 +15,36 @@ struct QuotesScreen: View
     {
         Group
         {
-            if vm.quotes.isEmpty
+            switch vm.state 
             {
+                case .loading: 
                 LoadingView(text: "Fetching Posts...")
-            }
-            else
-            {
+
+                case .success(let data):
                 List
                 {
-                    ForEach(vm.quotes, id: \.id)
+                    ForEach(data, id: \.id)
                     { item in
                         QuoteView(item: item)
                     }
                 }
+                default:
+                    EmptyView()
+            }
+        }
+        .alert("Error",
+               isPresented: $vm.hasError,
+               presenting: vm.state) { detail in Button("Retry") 
+                {
+                    Task {await vm.getAllQuotes()}
+                }
+
+        } message: { detail in
+            
+            if case let .failed(error) = detail 
+            {
+            
+                Text(error.localizedDescription)
             }
         }
         .task
