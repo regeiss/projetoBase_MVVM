@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E11830F128079A21003D4437 /* NetworkReach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11830F028079A21003D4437 /* NetworkReach.swift */; };
+		E11830F3280F835C003D4437 /* QuotesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11830F2280F835B003D4437 /* QuotesEndPoint.swift */; };
 		E127D4BC27FFCBEA004CE024 /* projetoBase_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4BB27FFCBEA004CE024 /* projetoBase_MVVMApp.swift */; };
 		E127D4BE27FFCBEA004CE024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4BD27FFCBEA004CE024 /* ContentView.swift */; };
 		E127D4C027FFCBEE004CE024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127D4BF27FFCBEE004CE024 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		E11830F028079A21003D4437 /* NetworkReach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReach.swift; sourceTree = "<group>"; };
+		E11830F2280F835B003D4437 /* QuotesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesEndPoint.swift; sourceTree = "<group>"; };
 		E127D4B827FFCBEA004CE024 /* projetoBase_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoBase_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E127D4BB27FFCBEA004CE024 /* projetoBase_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projetoBase_MVVMApp.swift; sourceTree = "<group>"; };
 		E127D4BD27FFCBEA004CE024 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				E127D4D628033250004CE024 /* APIConstants.swift */,
+				E11830F2280F835B003D4437 /* QuotesEndPoint.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				E127D4DF28039C44004CE024 /* QuotesService.swift in Sources */,
 				E127D4E32804E459004CE024 /* View+Preview.swift in Sources */,
 				E127D4E52804E4A7004CE024 /* LoadingView.swift in Sources */,
+				E11830F3280F835C003D4437 /* QuotesEndPoint.swift in Sources */,
 				E127D4BE27FFCBEA004CE024 /* ContentView.swift in Sources */,
 				E127D4BC27FFCBEA004CE024 /* projetoBase_MVVMApp.swift in Sources */,
 				E11830F128079A21003D4437 /* NetworkReach.swift in Sources */,
