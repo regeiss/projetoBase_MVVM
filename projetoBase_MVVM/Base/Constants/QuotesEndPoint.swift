@@ -28,7 +28,7 @@ extension QuoteAPI: APIBuilder
         switch self
         {
         case .getPosts:
-            return URL(string: "https://api.lil.software")!
+            return URL(string: "https://jsonplaceholder.typicode.com")!
         }
     }
     
@@ -37,7 +37,7 @@ extension QuoteAPI: APIBuilder
         switch self
         {
             case .getPosts:
-            return "/news"
+            return "/posts"
         }
     }
     
