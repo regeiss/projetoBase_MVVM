@@ -18,8 +18,8 @@ struct QuoteView: View
         {
             HStack
             {
-                 Image(systemName: "tv")
-                     .font(.system(size: 12, weight: .black))
+                 Image(systemName: "character.bubble.fill")
+                     .font(.system(size: 16, weight: .black))
                  Text(String(item.id))
              }
              

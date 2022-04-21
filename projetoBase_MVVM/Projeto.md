@@ -7,7 +7,10 @@
 <!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
 
 ## Topics
-
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
+### Melhorar deteccao de erros
+### Log
+### Pagina de setup
+### Modo escuro 
+### Swipe down 
 
 - <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->

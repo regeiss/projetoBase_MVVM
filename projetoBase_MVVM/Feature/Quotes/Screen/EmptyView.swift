@@ -13,7 +13,7 @@ struct EmptyView: View
     {
         VStack(spacing: 12)
         {
-            Image(systemName: "exclamationmark.icloud.fill")
+            Image(systemName: "network.badge.shield.half.filled")
                 .foregroundColor(.green)
                 .font(.system(size: 50, weight: .heavy))
             Text("Tela inicial")
