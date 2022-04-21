@@ -33,19 +33,9 @@ struct QuotesScreen: View
             }
         }
         .alert("Error",
-               isPresented: $vm.hasError,
-               presenting: vm.state) { detail in Button("Retry") 
-                {
-                    Task {await vm.getAllQuotes()}
-                }
-
-        } message: { detail in
-            
-            if case let .failed(error) = detail 
-            {
-            
-                Text(error.localizedDescription)
-            }
+                isPresented: $vm.hasError, presenting: vm.state) { detail in Button("Retry", role: .destructive)
+                    { Task {await vm.getAllQuotes()}}}
+                message: { detail in if case let .failed(error) = detail { Text(error.localizedDescription)}
         }
         .task
         {
