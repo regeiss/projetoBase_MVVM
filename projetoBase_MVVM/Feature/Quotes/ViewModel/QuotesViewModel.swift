@@ -40,7 +40,6 @@ final class QuotesViewModelImpl: QuotesViewModel
         self.hasError = false
         do
         {
-            //self.quotes = try await service.fetch()
             let data = try await service.fetch()
             self.state = .success(data: data)
         }

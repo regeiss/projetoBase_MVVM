@@ -13,34 +13,39 @@ struct QuotesScreen: View
     
     var body: some View
     {
-        Group
+        NavigationView
         {
-            switch vm.state 
+            Group
             {
-                case .loading: 
-                LoadingView(text: "Fetching Posts...")
-
-                case .success(let data):
-                List
+                switch vm.state
                 {
-                    ForEach(data, id: \.id)
-                    { item in
-                        QuoteView(item: item)
+                case .loading:
+                    LoadingView(text: "Fetching Posts...")
+                    
+                case .success(let data):
+                    List
+                    {
+                        ForEach(data, id: \.id)
+                        { item in
+                            QuoteView(item: item)
+                            NavigationLink(destination: Text("Segunda view")) {Text("Segunda view")}
+                        }
                     }
-                }
                 default:
                     EmptyView()
+                }
             }
-        }
-        .alert("Error",
+            .alert("Error",
                 isPresented: $vm.hasError, presenting: vm.state) { detail in Button("Retry", role: .destructive)
                     { Task {await vm.getAllQuotes()}}}
-                message: { detail in if case let .failed(error) = detail { Text(error.localizedDescription)}
+                message: { detail in if case let .failed(error) = detail { Text(error.localizedDescription)}}
+            .task
+                { await vm.getAllQuotes()}
+            .navigationTitle("Postagens")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .task
-        {
-            await vm.getAllQuotes()
-        }
+            //.listStyle(.plain)
+            //.swipeActions(edge: .HorizontalEdge, allowsFullSwipe: true, content: {Task {await vm.getAllQuotes()}})
     }
 }
 
