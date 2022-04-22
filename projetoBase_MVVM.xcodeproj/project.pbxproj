@@ -12,6 +12,7 @@
 		E11830F52810D05D003D4437 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11830F42810D05D003D4437 /* EmptyView.swift */; };
 		E11830F728122373003D4437 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11830F628122373003D4437 /* Settings.swift */; };
 		E11830FA2812244C003D4437 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11830F92812244C003D4437 /* Theme.swift */; };
+		E11830FC28122916003D4437 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11830FB28122916003D4437 /* DetailView.swift */; };
 		E127D4BC27FFCBEA004CE024 /* projetoBase_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4BB27FFCBEA004CE024 /* projetoBase_MVVMApp.swift */; };
 		E127D4BE27FFCBEA004CE024 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127D4BD27FFCBEA004CE024 /* ContentView.swift */; };
 		E127D4C027FFCBEE004CE024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127D4BF27FFCBEE004CE024 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		E11830F42810D05D003D4437 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		E11830F628122373003D4437 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E11830F92812244C003D4437 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E11830FB28122916003D4437 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E127D4B827FFCBEA004CE024 /* projetoBase_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoBase_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E127D4BB27FFCBEA004CE024 /* projetoBase_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projetoBase_MVVMApp.swift; sourceTree = "<group>"; };
 		E127D4BD27FFCBEA004CE024 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				E127D4DA28033799004CE024 /* QuoteView.swift */,
+				E11830FB28122916003D4437 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				E127D4DD28039C16004CE024 /* QuotesScreen.swift in Sources */,
 				E127D4DF28039C44004CE024 /* QuotesService.swift in Sources */,
+				E11830FC28122916003D4437 /* DetailView.swift in Sources */,
 				E127D4E32804E459004CE024 /* View+Preview.swift in Sources */,
 				E127D4E52804E4A7004CE024 /* LoadingView.swift in Sources */,
 				E11830F3280F835C003D4437 /* QuotesEndPoint.swift in Sources */,

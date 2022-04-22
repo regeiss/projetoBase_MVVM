@@ -28,7 +28,7 @@ struct QuotesScreen: View
                         ForEach(data, id: \.id)
                         { item in
                             QuoteView(item: item)
-                            NavigationLink(destination: Text("Segunda view")) {Text("Segunda view")}
+                            NavigationLink(destination: DetailView(), label: {Text("*")})
                         }
                     }
                 default:
