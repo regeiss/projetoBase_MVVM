@@ -27,8 +27,14 @@ struct QuotesScreen: View
                     {
                         ForEach(data, id: \.id)
                         { item in
+                            NavigationLink(destination: DetailView(), label: {
+                                HStack
+                                {
+                                     Image(systemName: "character.bubble.fill")
+                                         .font(.system(size: 16, weight: .black))
+                                     Text(String(item.id))
+                                 }})
                             QuoteView(item: item)
-                            NavigationLink(destination: DetailView(), label: {Text("*")})
                         }
                     }
                 default:
@@ -43,9 +49,8 @@ struct QuotesScreen: View
                 { await vm.getAllQuotes()}
             .navigationTitle("Postagens")
             .navigationBarTitleDisplayMode(.inline)
+            .refreshable { await vm.getAllQuotes()}  //?
         }
-            //.listStyle(.plain)
-            //.swipeActions(edge: .HorizontalEdge, allowsFullSwipe: true, content: {Task {await vm.getAllQuotes()}})
     }
 }
 

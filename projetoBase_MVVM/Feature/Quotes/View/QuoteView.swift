@@ -16,14 +16,7 @@ struct QuoteView: View
     {
         VStack(alignment: .leading, spacing: 8)
         {
-            HStack
-            {
-                 Image(systemName: "character.bubble.fill")
-                     .font(.system(size: 16, weight: .black))
-                 Text(String(item.id))
-             }
-             
-             Text(makeAttributedString(title:"ID", label:String(item.userId)))
+             Text(makeAttributedString(title:"userID", label:String(item.userId)))
              Text(makeAttributedString(title:"Titulo", label: item.title))
              Text(makeAttributedString(title:"Texto", label: item.body))
          }
