@@ -14,7 +14,7 @@ struct projetoBase_MVVMApp: App
     {
         WindowGroup
         {
-            QuotesScreen()
+            ContentView()
         }
     }
 }

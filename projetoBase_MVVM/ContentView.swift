@@ -9,10 +9,33 @@ import SwiftUI
 
 struct ContentView: View
 {
+    @AppStorage("darkModeEnabled") private var darkModeEnabled = false
+    @AppStorage("systemThemeEnabled") private var systemThemeEnabled = false
+    
+    private let themeManager = ThemeManager()
+    
     var body: some View
     {
-        Text("Hello, world!")
-            .padding()
+        TabView
+        {
+            EmptyView()
+                .tabItem
+                    { Image(systemName: "network.badge.shield.half.filled")
+                      Text("Inicial")
+                    }
+            QuotesScreen()
+                .tabItem
+                    { Image(systemName: "newspaper")
+                      Text("Posts")
+                    }
+            SettingsView(darkModeEnabled: $darkModeEnabled, systemThemeEnabled: $systemThemeEnabled, themeManager: themeManager)
+                .tabItem
+            {
+                 Image(systemName: "gearshape")
+                  Text("Settings")
+                
+            }
+        }
     }
 }
 

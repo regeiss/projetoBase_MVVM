@@ -7,14 +7,19 @@
 
 import SwiftUI
 
-struct DetailView: View {
-    var body: some View {
-        Text("View detalhe")
+struct DetailView: View
+{
+    var corpoTexto: String
+    var body: some View
+    {
+        Text(corpoTexto)
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
+struct DetailView_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
+        DetailView(corpoTexto: "")
     }
 }

@@ -8,25 +8,27 @@
 import SwiftUI
 import UIKit
 
-enum Constants {
+enum Constants
+{
     static let twitter = "https://twitter.com/tundsdev"
     static let email = "mailto:foo@bar.com"
     static let phone = "tel:07000000000"
 }
 
-struct SettingsView: View {
-    
+struct SettingsView: View
+{
     @Binding var darkModeEnabled: Bool
     @Binding var systemThemeEnabled: Bool
 
     let themeManager: ThemeManager
     
-    var body: some View {
-        
-        NavigationView {
-            
-            Form {
-                
+    var body: some View
+    {
+        NavigationView
+        {
+            Form
+            {
+                // TODO: arrumar formatacao
                 Section(header: Text("Display"),
                         footer: Text("System settings will override Dark Mode and use the current device theme")) {
                     Toggle(isOn: $darkModeEnabled,
@@ -37,7 +39,7 @@ struct SettingsView: View {
                                   perform: { _ in
                                     themeManager.handleTheme(darkMode: darkModeEnabled,
                                                                   system: systemThemeEnabled)
-                                    
+
                                   })
                     Toggle(isOn: $systemThemeEnabled,
                            label: {
@@ -47,7 +49,7 @@ struct SettingsView: View {
                                   perform: { _ in
                                     themeManager.handleTheme(darkMode: darkModeEnabled,
                                                                   system: systemThemeEnabled)
-                                    
+
                                   })
                 }
                 
@@ -71,23 +73,45 @@ struct SettingsView: View {
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
+struct SettingsView_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
         SettingsView(darkModeEnabled: .constant(false),
                      systemThemeEnabled: .constant(false),
                      themeManager: ThemeManager())
     }
 }
 
-class ThemeManager {
+class ThemeManager
+{
     
-    func handleTheme(darkMode: Bool, system: Bool) {
+    func handleTheme(darkMode: Bool, system: Bool)
+    {
         
-        guard !system else {
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .unspecified
-            return
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25)
+        {
+            guard !system
+            else
+            {
+                UIApplication.keyWindow?.overrideUserInterfaceStyle = .unspecified
+                return
+                
+            }
         }
         
-        UIApplication.shared.windows.first?.overrideUserInterfaceStyle = darkMode ? .dark : .light
+        UIApplication.keyWindow?.overrideUserInterfaceStyle = darkMode ? .dark : .light
+    }
+}
+
+extension UIApplication
+{
+    static var keyWindow: UIWindow?
+    {
+    return UIApplication.shared.connectedScenes
+        .filter {$0.activationState == .foregroundActive}
+        .first(where: {$0 is UIWindowScene})
+        .flatMap({$0 as? UIWindowScene})?.windows
+        .first(where: \.isKeyWindow)
     }
 }

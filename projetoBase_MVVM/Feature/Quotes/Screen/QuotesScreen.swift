@@ -27,7 +27,7 @@ struct QuotesScreen: View
                     {
                         ForEach(data, id: \.id)
                         { item in
-                            NavigationLink(destination: DetailView(), label: {
+                            NavigationLink(destination: DetailView(corpoTexto: item.body), label: {
                                 HStack
                                 {
                                      Image(systemName: "character.bubble.fill")
