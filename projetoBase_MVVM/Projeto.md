@@ -6,6 +6,8 @@
 ### Melhorar detecção de erros
 ### Log
 ### Login, formularios
+### Imagens  
+> Kingfisher  
 
 ### Pagina de setup - ok
 ### Modo escuro - 
