@@ -13,7 +13,8 @@
 
 ### Pagina de setup - ok
 ### Modo escuro - 
-> ajustar o toggle
+> ajustar o toggle  
+
 > ajustar cores da lista
 
 ### Swipe down - ver o erro

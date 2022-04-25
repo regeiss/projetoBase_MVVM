@@ -32,7 +32,7 @@ struct QuoteView: View
         
         if let range = string.range(of: label)
         {
-            string[range].foregroundColor = .systemGray4 
+            string[range].foregroundColor = .systemGray
             string[range].font = .system(size: 16, weight: .regular)
         }
         return string
