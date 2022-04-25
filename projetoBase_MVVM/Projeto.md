@@ -5,9 +5,12 @@
 ## Topics
 ### Melhorar detecção de erros
 ### Log
-### Login, formularios
+### Login, formularios  
+> Loadscreen, animações com FLottie  
+> 
 ### Imagens  
 > Kingfisher  
+> AsyncImage
 
 ### Pagina de setup - ok
 ### Modo escuro - 
