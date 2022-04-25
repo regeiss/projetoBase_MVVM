@@ -27,12 +27,12 @@ struct QuoteView: View
     private func makeAttributedString(title: String, label: String) -> AttributedString
     {
         var string = AttributedString("\(title): \(label)")
-        string.foregroundColor = .black
+        string.foregroundColor = .label
         string.font = .system(size: 16, weight: .bold)
         
         if let range = string.range(of: label)
         {
-            string[range].foregroundColor = .black.opacity(0.8)
+            string[range].foregroundColor = .systemGray4 
             string[range].font = .system(size: 16, weight: .regular)
         }
         return string

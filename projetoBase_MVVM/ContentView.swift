@@ -21,20 +21,21 @@ struct ContentView: View
             EmptyView()
                 .tabItem
                     { Image(systemName: "network.badge.shield.half.filled")
-                      Text("Inicial")
+                        Text("Inicial")
                     }
             QuotesScreen()
                 .tabItem
                     { Image(systemName: "newspaper")
-                      Text("Posts")
+                        Text("Posts")
                     }
             SettingsView(darkModeEnabled: $darkModeEnabled, systemThemeEnabled: $systemThemeEnabled, themeManager: themeManager)
                 .tabItem
-            {
-                 Image(systemName: "gearshape")
-                  Text("Settings")
-                
-            }
+                    { Image(systemName: "gearshape")
+                        Text("Settings")
+                    }
+        }.onAppear
+        {
+            self.themeManager.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
         }
     }
 }

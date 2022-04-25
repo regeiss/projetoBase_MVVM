@@ -9,9 +9,11 @@
 ## Topics
 ### Melhorar deteccao de erros
 ### Log
-### Pagina de setup
-### Modo escuro 
-### Swipe down 
-### Login
+### Login, formularios
 
+### Pagina de setup - ok
+### Modo escuro - 
+> ajustar o toggle
+> ajustar cores da lista
 
+### Swipe down - ver o erro

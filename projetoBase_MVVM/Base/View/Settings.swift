@@ -85,10 +85,8 @@ struct SettingsView_Previews: PreviewProvider
 
 class ThemeManager
 {
-    
     func handleTheme(darkMode: Bool, system: Bool)
     {
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25)
         {
             guard !system
@@ -96,10 +94,8 @@ class ThemeManager
             {
                 UIApplication.keyWindow?.overrideUserInterfaceStyle = .unspecified
                 return
-                
             }
         }
-        
         UIApplication.keyWindow?.overrideUserInterfaceStyle = darkMode ? .dark : .light
     }
 }
