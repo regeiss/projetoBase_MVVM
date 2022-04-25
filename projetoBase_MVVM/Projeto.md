@@ -3,7 +3,7 @@
 ## Overview
 
 ## Topics
-### Melhorar deteccao de erros
+### Melhorar detecção de erros
 ### Log
 ### Login, formularios
 
