@@ -1,10 +1,6 @@
 # Projeto
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
-
 ## Overview
-
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
 
 ## Topics
 ### Melhorar deteccao de erros
@@ -15,6 +11,7 @@
 ### Modo escuro - 
 > ajustar o toggle  
 
-> ajustar cores da lista
+> ajustar cores da lista  
+> > semantic colors 
 
 ### Swipe down - ver o erro
