@@ -6,7 +6,7 @@
 ### Melhorar detecção de erros
 ### Log
 ### Login, formularios  
-> Loadscreen, animações com FLottie  
+> Loadscreen, animações com Flottie  
 > 
 ### Imagens  
 > Kingfisher  
