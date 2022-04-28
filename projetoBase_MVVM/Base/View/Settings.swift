@@ -10,7 +10,7 @@ import UIKit
 
 enum Constants
 {
-    static let twitter = "https://twitter.com/tundsdev"
+    static let twitter = "https://twitter.com/xxxxxxx"
     static let email = "mailto:foo@bar.com"
     static let phone = "tel:07000000000"
 }

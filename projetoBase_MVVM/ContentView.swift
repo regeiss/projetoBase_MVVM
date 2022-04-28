@@ -34,9 +34,7 @@ struct ContentView: View
                         Text("Settings")
                     }
         }.onAppear
-        {
-            self.themeManager.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
-        }
+        { self.themeManager.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)}
     }
 }
 

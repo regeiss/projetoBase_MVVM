@@ -27,6 +27,7 @@ struct EmptyView: View
         }
     }
 }
+
 struct EmptyView_Previews: PreviewProvider
 {
     static var previews: some View
