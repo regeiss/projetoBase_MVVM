@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os
 
 protocol QuotesViewModel: ObservableObject
 {
@@ -15,6 +16,8 @@ protocol QuotesViewModel: ObservableObject
 @MainActor
 final class QuotesViewModelImpl: QuotesViewModel
 {
+    private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: QuotesViewModelImpl.self))
+    
     enum State 
     {
         case na
@@ -38,6 +41,8 @@ final class QuotesViewModelImpl: QuotesViewModel
     {
         self.state = .loading
         self.hasError = false
+        
+        Self.logger.trace("Iniciando fetch")
         do
         {
             let data = try await service.fetch()
@@ -47,6 +52,8 @@ final class QuotesViewModelImpl: QuotesViewModel
         {
             self.state = .failed(error: error)
             self.hasError = true
+            Self.logger.error("\(error.localizedDescription, privacy: .public)")
         }
+        Self.logger.trace("Finalizando fetch")
     }
 }

@@ -38,7 +38,7 @@ struct QuotesScreen: View
                         }
                     }
                 default:
-                    EmptyView()
+                    List{}
                 }
             }
             .alert("Error",
@@ -48,8 +48,8 @@ struct QuotesScreen: View
             .task
                 { await vm.getAllQuotes()}
             .navigationTitle("Postagens")
-            .navigationBarTitleDisplayMode(.inline)
-            .refreshable { await vm.getAllQuotes()}  //?
+            .navigationBarTitleDisplayMode(.large)
+            .refreshable { Task {await vm.getAllQuotes()}}  //?
         }
     }
 }
