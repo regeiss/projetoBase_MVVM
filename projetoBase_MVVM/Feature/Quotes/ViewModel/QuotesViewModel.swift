@@ -29,6 +29,7 @@ final class QuotesViewModelImpl: QuotesViewModel
     @Published private(set) var quotes: [Quote] = []
     @Published private(set) var state: State = .na
     @Published var hasError: Bool = false
+    @Published var carregando: Bool = false
     
     private let service: QuotesService
 
@@ -41,17 +42,20 @@ final class QuotesViewModelImpl: QuotesViewModel
     {
         self.state = .loading
         self.hasError = false
+        self.carregando = true
         
         Self.logger.trace("Iniciando fetch")
         do
         {
             let data = try await service.fetch()
             self.state = .success(data: data)
+            self.carregando = false
         }
         catch
         {
             self.state = .failed(error: error)
             self.hasError = true
+            self.carregando = false
             Self.logger.error("\(error.localizedDescription, privacy: .public)")
         }
         Self.logger.trace("Finalizando fetch")

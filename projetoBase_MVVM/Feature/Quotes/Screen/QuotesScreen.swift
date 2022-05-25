@@ -21,7 +21,6 @@ struct QuotesScreen: View
                 {
                 case .loading:
                     LoadingView(text: "Fetching Posts...")
-                    
                 case .success(let data):
                     List
                     {
@@ -36,7 +35,7 @@ struct QuotesScreen: View
                                  }})
                             QuoteView(item: item)
                         }
-                    }
+                    } .redacted(reason: vm.carregando == true ? .placeholder : [])
                 default:
                     List{}
                 }
@@ -49,9 +48,10 @@ struct QuotesScreen: View
                 { await vm.getAllQuotes()}
             .navigationTitle("Postagens")
             .navigationBarTitleDisplayMode(.large)
-            .refreshable { Task {await vm.getAllQuotes()}}  //?
+            //.refreshable { Task {await vm.getAllQuotes()}}  //?
         }
     }
+    
 }
 
 struct QuotesScreen_Previews: PreviewProvider
