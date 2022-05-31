@@ -10,6 +10,7 @@ import SwiftUI
 struct QuotesScreen: View
 {
     @StateObject private var vm = QuotesViewModelImpl(service: QuotesServiceImpl())
+    @State private var searchText: String = ""
     
     var body: some View
     {
@@ -35,7 +36,7 @@ struct QuotesScreen: View
                                  }})
                             QuoteView(item: item)
                         }
-                    } .redacted(reason: vm.carregando == true ? .placeholder : [])
+                    }
                 default:
                     List{}
                 }
@@ -48,6 +49,9 @@ struct QuotesScreen: View
                 { await vm.getAllQuotes()}
             .navigationTitle("Postagens")
             .navigationBarTitleDisplayMode(.large)
+            .redacted(reason: vm.carregando ? .placeholder : [])
+            .allowsHitTesting(vm.carregando)
+                .searchable(text: $searchText, placement: .automatic, prompt: Text("?????"))
             //.refreshable { Task {await vm.getAllQuotes()}}  //?
         }
     }
